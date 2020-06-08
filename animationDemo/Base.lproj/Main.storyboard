@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sbS-va-0pw">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame_0_delay-0.1s.gif" translatesAutoresizingMaskIntoConstraints="NO" id="sbS-va-0pw">
                                 <rect key="frame" x="57" y="298" width="300" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="WZC-CY-jzy"/>
@@ -26,6 +26,9 @@
                                 <rect key="frame" x="183" y="219" width="48" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mXF-6L-6be"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="P59-P5-xep">
                                 <rect key="frame" x="66" y="638" width="282" height="38"/>
@@ -34,16 +37,25 @@
                                         <rect key="frame" x="0.0" y="0.0" width="66" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="Fade In"/>
+                                        <connections>
+                                            <action selector="fadeIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dMv-Sx-wNe"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pus-do-6U1">
                                         <rect key="frame" x="116" y="0.0" width="49" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="Grow"/>
+                                        <connections>
+                                            <action selector="grow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kKz-Ye-tRT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16G-w2-sbn">
                                         <rect key="frame" x="215" y="0.0" width="67" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="Slide In"/>
+                                        <connections>
+                                            <action selector="slideIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5wE-pm-6gn"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -59,10 +71,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="sbS-va-0pw" id="9Rq-U6-dqL"/>
+                        <outlet property="playBtn" destination="dD7-wd-bkz" id="oUd-Nd-J4d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="138"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="frame_0_delay-0.1s.gif" width="374" height="277"/>
+    </resources>
 </document>
